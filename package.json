@@ -1,0 +1,36 @@
+{
+  "name": "web-labs-starter",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev:webpack": "concurrently \"webpack serve --mode=development\" \"json-server --watch api/db.json --routes api/routes.json --port 5174\"",
+    "dev:vite": "concurrently \"vite\" \"json-server --watch api/db.json --routes api/routes.json --port 5174\"",
+    "build:webpack": "npm run lint && webpack --mode=production",
+    "build:vite": "npm run lint && vite build",
+    "preview:webpack": "npm run lint && webpack serve --mode=development",
+    "preview:vite": "npm run lint && vite preview",
+    "lint": "eslint . --ext .js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.0",
+    "@babel/preset-env": "^7.23.0",
+    "babel-loader": "^9.1.3",
+    "concurrently": "^8.2.2",
+    "css-loader": "^6.8.1",
+    "eslint": "^9.8.0",
+    "html-webpack-plugin": "^5.6.0",
+    "json-server": "^0.17.4",
+    "sass": "^1.94.2",
+    "sass-loader": "^16.0.0",
+    "style-loader": "^3.3.3",
+    "vite": "^5.4.0",
+    "webpack": "^5.90.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  },
+  "dependencies": {
+    "axios": "^1.7.2",
+    "dayjs": "^1.11.11"
+  }
+}

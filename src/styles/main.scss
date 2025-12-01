@@ -890,6 +890,7 @@ img {
     @include container;
     padding-block: 3rem 4rem;
 
+
     &__back {
         display: inline-block;
         margin-bottom: 2rem;
@@ -1137,7 +1138,7 @@ img {
 
 .how {
     background: rgba(30, 41, 59, 0.4);
-    padding-block: 4rem;
+
     text-align: center;
 
     &__title {
@@ -1217,6 +1218,7 @@ img {
     @include container;
     display: flex;
     padding-top: 1rem;
+    min-height: 80vh;
 }
 
 /* LEFT SIDEBAR */
@@ -1699,4 +1701,99 @@ img {
             color: #0f172a;
         }
     }
+}
+
+/* === Popular Prompts: filters + pagination === */
+
+.prompts {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    min-height: auto;
+    font-family: $font-main;
+
+    &__title {
+        text-align: center;
+        margin-bottom: 1.5rem;
+
+    }
+
+    /* Форма фільтрів */
+    &__filters {
+        max-width: 780px;
+        margin: 0 auto 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+
+    }
+
+    &__filters-input,
+    &__filters-select {
+        height: 36px;
+        padding: 0 0.9rem;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        background: rgba(0, 0, 0, 0.35);
+        color: #fff;
+        font-size: 0.9rem;
+        outline: none;
+    }
+
+    &__filters-input::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    &__filters-input:focus,
+    &__filters-select:focus {
+        border-color: #00bfff;
+        box-shadow: 0 0 0 1px rgba(0, 191, 255, 0.4);
+    }
+
+    /* Кнопка Apply вже з .btn, просто трохи відступ */
+    &__filters .btn {
+        padding-inline: 1.6rem;
+        height: 38px;
+    }
+
+    /* Пагінація */
+    &__pagination {
+        margin: 1.5rem auto 0;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    &__page-btn {
+        min-width: 90px;
+    }
+}
+
+/* Невеликий адаптив, щоб фільтри не ломались на мобілці */
+@media (max-width: 600px) {
+    .prompts__filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .prompts__filters-input,
+    .prompts__filters-select {
+        width: 100%;
+    }
+
+    .prompts__filters .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+.prompts,
+.prompts__grid,
+main {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+footer {
+    margin-top: 0 !important;
 }
