@@ -112,11 +112,6 @@ export function renderCartPage(root) {
 
         <aside class="cart-payment" aria-label="Card payment form">
           <form class="cart-form" aria-label="Card checkout form" id="pay-form">
-            <fieldset class="cart-form__fieldset">
-              <label class="cart-form__label" for="card-number">Card</label>
-              <input class="cart-form__input" id="card-number" name="card-number" type="text"
-                  inputmode="numeric" placeholder="4 111  1111  1111  1111" required />
-            </fieldset>
 
             <fieldset class="cart-form__fieldset">
               <div class="cart-form__row">

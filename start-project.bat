@@ -24,7 +24,7 @@ echo [OK] node_modules знайдено
 echo [INFO] Запуск Vite dev-сервера...
 
 :: Запуск Vite
-start cmd /k "npm run dev"
+start cmd /k "npm run dev:vite"
 
 :: Очікування запуску сервера
 timeout /t 3 > nul
